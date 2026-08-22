@@ -1,0 +1,1602 @@
+[
+    {
+        "timestamp": "2026-07-23T15:08:16.888955",
+        "transaction_id": "TXN-10001",
+        "amount": 3645.52,
+        "merchant": "Netflix",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-07-23T18:52:16.888955",
+        "transaction_id": "TXN-10093",
+        "amount": 8233.23,
+        "merchant": "Local Supermarket",
+        "risk_level": "MEDIUM",
+        "action": "REVIEW"
+    },
+    {
+        "timestamp": "2026-07-24T00:35:16.888955",
+        "transaction_id": "TXN-10114",
+        "amount": 4328.35,
+        "merchant": "Zomato",
+        "risk_level": "MEDIUM",
+        "action": "REVIEW"
+    },
+    {
+        "timestamp": "2026-07-24T02:05:16.888955",
+        "transaction_id": "TXN-10085",
+        "amount": 6832.47,
+        "merchant": "Walmart",
+        "risk_level": "MEDIUM",
+        "action": "REVIEW"
+    },
+    {
+        "timestamp": "2026-07-24T06:24:16.888955",
+        "transaction_id": "TXN-10199",
+        "amount": 4235.75,
+        "merchant": "Steam",
+        "risk_level": "MEDIUM",
+        "action": "REVIEW"
+    },
+    {
+        "timestamp": "2026-07-24T08:19:16.888955",
+        "transaction_id": "TXN-10109",
+        "amount": 141042.93,
+        "merchant": "Swiggy",
+        "risk_level": "HIGH",
+        "action": "BLOCK"
+    },
+    {
+        "timestamp": "2026-07-24T14:34:16.888955",
+        "transaction_id": "TXN-10136",
+        "amount": 1459.88,
+        "merchant": "Swiggy",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-07-24T18:52:16.888955",
+        "transaction_id": "TXN-10195",
+        "amount": 445.83,
+        "merchant": "Local Supermarket",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-07-24T21:27:16.888955",
+        "transaction_id": "TXN-10076",
+        "amount": 95097.48,
+        "merchant": "Walmart",
+        "risk_level": "CRITICAL",
+        "action": "BLOCK"
+    },
+    {
+        "timestamp": "2026-07-24T23:29:16.888955",
+        "transaction_id": "TXN-10156",
+        "amount": 4047.47,
+        "merchant": "Uber",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-07-25T00:08:16.888955",
+        "transaction_id": "TXN-10046",
+        "amount": 3001.16,
+        "merchant": "Swiggy",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-07-25T00:29:16.888955",
+        "transaction_id": "TXN-10008",
+        "amount": 10144.54,
+        "merchant": "Steam",
+        "risk_level": "MEDIUM",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-07-25T08:54:16.888955",
+        "transaction_id": "TXN-10011",
+        "amount": 1502.08,
+        "merchant": "Amazon",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-07-25T13:02:16.888955",
+        "transaction_id": "TXN-10182",
+        "amount": 86.46,
+        "merchant": "PlayStation Network",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-07-26T18:20:16.888955",
+        "transaction_id": "TXN-10054",
+        "amount": 7394.71,
+        "merchant": "Apple Store",
+        "risk_level": "MEDIUM",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-07-26T20:51:16.888955",
+        "transaction_id": "TXN-10088",
+        "amount": 2689.94,
+        "merchant": "Flipkart",
+        "risk_level": "MEDIUM",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-07-27T08:03:16.888955",
+        "transaction_id": "TXN-10097",
+        "amount": 4854.51,
+        "merchant": "Walmart",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-07-27T13:25:16.888955",
+        "transaction_id": "TXN-10196",
+        "amount": 4813.17,
+        "merchant": "Flipkart",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-07-27T23:52:16.888955",
+        "transaction_id": "TXN-10087",
+        "amount": 3648.37,
+        "merchant": "Spotify",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-07-28T01:20:16.888955",
+        "transaction_id": "TXN-10137",
+        "amount": 690.95,
+        "merchant": "PlayStation Network",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-07-28T04:09:16.888955",
+        "transaction_id": "TXN-10050",
+        "amount": 687.15,
+        "merchant": "Zomato",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-07-28T05:28:16.888955",
+        "transaction_id": "TXN-10189",
+        "amount": 93597.2,
+        "merchant": "Zomato",
+        "risk_level": "HIGH",
+        "action": "BLOCK"
+    },
+    {
+        "timestamp": "2026-07-28T07:26:16.888955",
+        "transaction_id": "TXN-10157",
+        "amount": 4869.55,
+        "merchant": "Netflix",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-07-28T08:27:16.888955",
+        "transaction_id": "TXN-10151",
+        "amount": 123480.35,
+        "merchant": "Flipkart",
+        "risk_level": "HIGH",
+        "action": "BLOCK"
+    },
+    {
+        "timestamp": "2026-07-28T08:38:16.888955",
+        "transaction_id": "TXN-10118",
+        "amount": 2456.53,
+        "merchant": "Apple Store",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-07-28T15:47:16.888955",
+        "transaction_id": "TXN-10095",
+        "amount": 14132.92,
+        "merchant": "BestBuy",
+        "risk_level": "MEDIUM",
+        "action": "REVIEW"
+    },
+    {
+        "timestamp": "2026-07-28T17:29:16.888955",
+        "transaction_id": "TXN-10089",
+        "amount": 3679.55,
+        "merchant": "BestBuy",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-07-28T17:29:16.888955",
+        "transaction_id": "TXN-10119",
+        "amount": 109990.12,
+        "merchant": "Ola",
+        "risk_level": "HIGH",
+        "action": "BLOCK"
+    },
+    {
+        "timestamp": "2026-07-28T19:56:16.888955",
+        "transaction_id": "TXN-10165",
+        "amount": 2811.14,
+        "merchant": "Steam",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-07-29T00:36:16.888955",
+        "transaction_id": "TXN-10187",
+        "amount": 3051.5,
+        "merchant": "Walmart",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-07-29T01:10:16.888955",
+        "transaction_id": "TXN-10107",
+        "amount": 2819.21,
+        "merchant": "Flipkart",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-07-29T08:24:16.888955",
+        "transaction_id": "TXN-10043",
+        "amount": 3521.12,
+        "merchant": "Spotify",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-07-29T11:13:16.888955",
+        "transaction_id": "TXN-10026",
+        "amount": 4244.03,
+        "merchant": "Swiggy",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-07-29T14:12:16.888955",
+        "transaction_id": "TXN-10143",
+        "amount": 11934.97,
+        "merchant": "Flipkart",
+        "risk_level": "HIGH",
+        "action": "BLOCK"
+    },
+    {
+        "timestamp": "2026-07-29T14:46:16.888955",
+        "transaction_id": "TXN-10098",
+        "amount": 3165.45,
+        "merchant": "Apple Store",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-07-29T20:50:16.888955",
+        "transaction_id": "TXN-10032",
+        "amount": 2624.79,
+        "merchant": "Amazon",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-07-29T23:45:16.888955",
+        "transaction_id": "TXN-10039",
+        "amount": 3302.93,
+        "merchant": "Zomato",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-07-30T00:27:16.888955",
+        "transaction_id": "TXN-10113",
+        "amount": 846.27,
+        "merchant": "BestBuy",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-07-30T03:56:16.888955",
+        "transaction_id": "TXN-10112",
+        "amount": 12973.3,
+        "merchant": "Local Supermarket",
+        "risk_level": "CRITICAL",
+        "action": "BLOCK"
+    },
+    {
+        "timestamp": "2026-07-30T04:41:16.888955",
+        "transaction_id": "TXN-10193",
+        "amount": 2692.76,
+        "merchant": "Steam",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-07-30T07:13:16.888955",
+        "transaction_id": "TXN-10154",
+        "amount": 15135.77,
+        "merchant": "Zomato",
+        "risk_level": "HIGH",
+        "action": "BLOCK"
+    },
+    {
+        "timestamp": "2026-07-30T10:18:16.888955",
+        "transaction_id": "TXN-10128",
+        "amount": 3671.49,
+        "merchant": "Ola",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-07-30T10:31:16.888955",
+        "transaction_id": "TXN-10068",
+        "amount": 968.09,
+        "merchant": "Amazon",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-07-30T14:22:16.888955",
+        "transaction_id": "TXN-10010",
+        "amount": 3002.78,
+        "merchant": "BestBuy",
+        "risk_level": "MEDIUM",
+        "action": "REVIEW"
+    },
+    {
+        "timestamp": "2026-07-30T16:02:16.888955",
+        "transaction_id": "TXN-10090",
+        "amount": 139785.97,
+        "merchant": "Swiggy",
+        "risk_level": "CRITICAL",
+        "action": "BLOCK"
+    },
+    {
+        "timestamp": "2026-07-31T03:27:16.888955",
+        "transaction_id": "TXN-10083",
+        "amount": 3059.48,
+        "merchant": "Netflix",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-07-31T03:39:16.888955",
+        "transaction_id": "TXN-10146",
+        "amount": 590.08,
+        "merchant": "Swiggy",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-07-31T08:14:16.888955",
+        "transaction_id": "TXN-10024",
+        "amount": 789.81,
+        "merchant": "Apple Store",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-07-31T15:47:16.888955",
+        "transaction_id": "TXN-10009",
+        "amount": 44458.1,
+        "merchant": "BestBuy",
+        "risk_level": "HIGH",
+        "action": "BLOCK"
+    },
+    {
+        "timestamp": "2026-07-31T19:24:16.888955",
+        "transaction_id": "TXN-10015",
+        "amount": 3425.83,
+        "merchant": "Walmart",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-07-31T21:57:16.888955",
+        "transaction_id": "TXN-10019",
+        "amount": 1309.3,
+        "merchant": "Apple Store",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-07-31T23:57:16.888955",
+        "transaction_id": "TXN-10130",
+        "amount": 2851.48,
+        "merchant": "PlayStation Network",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-01T02:45:16.888955",
+        "transaction_id": "TXN-10163",
+        "amount": 3040.15,
+        "merchant": "Spotify",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-01T04:11:16.888955",
+        "transaction_id": "TXN-10111",
+        "amount": 3577.11,
+        "merchant": "Apple Store",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-01T09:53:16.888955",
+        "transaction_id": "TXN-10194",
+        "amount": 1583.46,
+        "merchant": "Amazon",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-01T12:06:16.888955",
+        "transaction_id": "TXN-10133",
+        "amount": 1214.95,
+        "merchant": "BestBuy",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-01T13:48:16.888955",
+        "transaction_id": "TXN-10064",
+        "amount": 2195.62,
+        "merchant": "Uber",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-01T14:35:16.888955",
+        "transaction_id": "TXN-10192",
+        "amount": 3160.44,
+        "merchant": "Ola",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-01T15:29:16.888955",
+        "transaction_id": "TXN-10073",
+        "amount": 3028.75,
+        "merchant": "Amazon",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-01T15:31:16.888955",
+        "transaction_id": "TXN-10102",
+        "amount": 4497.35,
+        "merchant": "BestBuy",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-01T15:34:16.888955",
+        "transaction_id": "TXN-10002",
+        "amount": 7817.07,
+        "merchant": "Ola",
+        "risk_level": "MEDIUM",
+        "action": "REVIEW"
+    },
+    {
+        "timestamp": "2026-08-01T22:18:16.888955",
+        "transaction_id": "TXN-10070",
+        "amount": 3927.59,
+        "merchant": "BestBuy",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-02T01:44:16.888955",
+        "transaction_id": "TXN-10025",
+        "amount": 11610.81,
+        "merchant": "Netflix",
+        "risk_level": "MEDIUM",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-02T09:19:16.888955",
+        "transaction_id": "TXN-10020",
+        "amount": 4530.58,
+        "merchant": "Spotify",
+        "risk_level": "MEDIUM",
+        "action": "REVIEW"
+    },
+    {
+        "timestamp": "2026-08-02T09:47:16.888955",
+        "transaction_id": "TXN-10094",
+        "amount": 3066.23,
+        "merchant": "Amazon",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-02T10:20:16.888955",
+        "transaction_id": "TXN-10170",
+        "amount": 3555.27,
+        "merchant": "Flipkart",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-02T16:34:16.888955",
+        "transaction_id": "TXN-10057",
+        "amount": 36695.2,
+        "merchant": "Swiggy",
+        "risk_level": "CRITICAL",
+        "action": "BLOCK"
+    },
+    {
+        "timestamp": "2026-08-02T20:07:16.888955",
+        "transaction_id": "TXN-10065",
+        "amount": 2753.29,
+        "merchant": "BestBuy",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-02T21:54:16.888955",
+        "transaction_id": "TXN-10100",
+        "amount": 3370.4,
+        "merchant": "Amazon",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-02T22:17:16.888955",
+        "transaction_id": "TXN-10127",
+        "amount": 42583.15,
+        "merchant": "Flipkart",
+        "risk_level": "CRITICAL",
+        "action": "BLOCK"
+    },
+    {
+        "timestamp": "2026-08-03T02:13:16.888955",
+        "transaction_id": "TXN-10162",
+        "amount": 3375.01,
+        "merchant": "Flipkart",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-03T02:19:16.888955",
+        "transaction_id": "TXN-10171",
+        "amount": 4045.28,
+        "merchant": "PlayStation Network",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-03T07:11:16.888955",
+        "transaction_id": "TXN-10053",
+        "amount": 3186.48,
+        "merchant": "Zomato",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-03T16:57:16.888955",
+        "transaction_id": "TXN-10062",
+        "amount": 3144.54,
+        "merchant": "PlayStation Network",
+        "risk_level": "MEDIUM",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-04T03:21:16.888955",
+        "transaction_id": "TXN-10117",
+        "amount": 1498.53,
+        "merchant": "Spotify",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-04T05:14:16.888955",
+        "transaction_id": "TXN-10047",
+        "amount": 30928.09,
+        "merchant": "Spotify",
+        "risk_level": "HIGH",
+        "action": "BLOCK"
+    },
+    {
+        "timestamp": "2026-08-04T05:58:16.888955",
+        "transaction_id": "TXN-10168",
+        "amount": 2842.2,
+        "merchant": "Zomato",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-04T10:08:16.888955",
+        "transaction_id": "TXN-10180",
+        "amount": 2836.11,
+        "merchant": "Amazon",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-04T12:27:16.888955",
+        "transaction_id": "TXN-10106",
+        "amount": 33288.69,
+        "merchant": "Netflix",
+        "risk_level": "CRITICAL",
+        "action": "BLOCK"
+    },
+    {
+        "timestamp": "2026-08-04T12:49:16.888955",
+        "transaction_id": "TXN-10063",
+        "amount": 151.15,
+        "merchant": "Walmart",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-04T18:23:16.888955",
+        "transaction_id": "TXN-10058",
+        "amount": 123585.32,
+        "merchant": "BestBuy",
+        "risk_level": "CRITICAL",
+        "action": "BLOCK"
+    },
+    {
+        "timestamp": "2026-08-04T20:36:16.888955",
+        "transaction_id": "TXN-10147",
+        "amount": 6569.6,
+        "merchant": "Ola",
+        "risk_level": "MEDIUM",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-05T12:50:16.888955",
+        "transaction_id": "TXN-10116",
+        "amount": 3099.45,
+        "merchant": "Netflix",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-05T21:21:16.888955",
+        "transaction_id": "TXN-10055",
+        "amount": 2941.27,
+        "merchant": "Uber",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-06T02:00:16.888955",
+        "transaction_id": "TXN-10153",
+        "amount": 4634.18,
+        "merchant": "Uber",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-06T02:29:16.888955",
+        "transaction_id": "TXN-10033",
+        "amount": 4139.05,
+        "merchant": "Zomato",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-06T04:44:16.888955",
+        "transaction_id": "TXN-10139",
+        "amount": 2055.05,
+        "merchant": "Steam",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-06T12:54:16.888955",
+        "transaction_id": "TXN-10038",
+        "amount": 1838.83,
+        "merchant": "Steam",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-06T13:19:16.888955",
+        "transaction_id": "TXN-10141",
+        "amount": 55794.49,
+        "merchant": "Swiggy",
+        "risk_level": "CRITICAL",
+        "action": "BLOCK"
+    },
+    {
+        "timestamp": "2026-08-06T13:33:16.888955",
+        "transaction_id": "TXN-10021",
+        "amount": 100909.72,
+        "merchant": "Netflix",
+        "risk_level": "CRITICAL",
+        "action": "BLOCK"
+    },
+    {
+        "timestamp": "2026-08-06T16:27:16.888955",
+        "transaction_id": "TXN-10124",
+        "amount": 9280.02,
+        "merchant": "Zomato",
+        "risk_level": "MEDIUM",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-06T19:10:16.888955",
+        "transaction_id": "TXN-10034",
+        "amount": 2888.77,
+        "merchant": "Uber",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-07T07:05:16.888955",
+        "transaction_id": "TXN-10017",
+        "amount": 13747.22,
+        "merchant": "Flipkart",
+        "risk_level": "MEDIUM",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-07T11:14:16.888955",
+        "transaction_id": "TXN-10042",
+        "amount": 2843.01,
+        "merchant": "Local Supermarket",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-07T11:46:16.888955",
+        "transaction_id": "TXN-10122",
+        "amount": 4071.15,
+        "merchant": "BestBuy",
+        "risk_level": "MEDIUM",
+        "action": "REVIEW"
+    },
+    {
+        "timestamp": "2026-08-07T12:21:16.888955",
+        "transaction_id": "TXN-10023",
+        "amount": 1527.82,
+        "merchant": "Apple Store",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-07T16:20:16.888955",
+        "transaction_id": "TXN-10013",
+        "amount": 54588.16,
+        "merchant": "Steam",
+        "risk_level": "HIGH",
+        "action": "BLOCK"
+    },
+    {
+        "timestamp": "2026-08-07T17:14:16.888955",
+        "transaction_id": "TXN-10045",
+        "amount": 2937.48,
+        "merchant": "Flipkart",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-08T02:16:16.888955",
+        "transaction_id": "TXN-10150",
+        "amount": 7056.6,
+        "merchant": "Amazon",
+        "risk_level": "MEDIUM",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-08T07:57:16.888955",
+        "transaction_id": "TXN-10191",
+        "amount": 96971.94,
+        "merchant": "Swiggy",
+        "risk_level": "HIGH",
+        "action": "BLOCK"
+    },
+    {
+        "timestamp": "2026-08-08T12:05:16.888955",
+        "transaction_id": "TXN-10105",
+        "amount": 4015.44,
+        "merchant": "Swiggy",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-08T12:19:16.888955",
+        "transaction_id": "TXN-10167",
+        "amount": 4398.69,
+        "merchant": "Apple Store",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-08T18:31:16.888955",
+        "transaction_id": "TXN-10134",
+        "amount": 4663.78,
+        "merchant": "Zomato",
+        "risk_level": "MEDIUM",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-08T19:30:16.888955",
+        "transaction_id": "TXN-10159",
+        "amount": 2133.26,
+        "merchant": "Apple Store",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-08T22:11:16.888955",
+        "transaction_id": "TXN-10061",
+        "amount": 10693.5,
+        "merchant": "PlayStation Network",
+        "risk_level": "MEDIUM",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-08T23:51:16.888955",
+        "transaction_id": "TXN-10049",
+        "amount": 3027.97,
+        "merchant": "Local Supermarket",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-09T00:51:16.888955",
+        "transaction_id": "TXN-10160",
+        "amount": 1864.23,
+        "merchant": "PlayStation Network",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-09T02:50:16.888955",
+        "transaction_id": "TXN-10145",
+        "amount": 136844.85,
+        "merchant": "Flipkart",
+        "risk_level": "CRITICAL",
+        "action": "BLOCK"
+    },
+    {
+        "timestamp": "2026-08-09T07:17:16.888955",
+        "transaction_id": "TXN-10110",
+        "amount": 5401.85,
+        "merchant": "Walmart",
+        "risk_level": "MEDIUM",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-09T09:01:16.888955",
+        "transaction_id": "TXN-10069",
+        "amount": 4114.89,
+        "merchant": "Walmart",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-09T15:18:16.888955",
+        "transaction_id": "TXN-10004",
+        "amount": 4561.94,
+        "merchant": "Steam",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-09T16:07:16.888955",
+        "transaction_id": "TXN-10176",
+        "amount": 4397.89,
+        "merchant": "Amazon",
+        "risk_level": "MEDIUM",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-09T16:31:16.888955",
+        "transaction_id": "TXN-10181",
+        "amount": 222.25,
+        "merchant": "Uber",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-09T23:21:16.888955",
+        "transaction_id": "TXN-10103",
+        "amount": 2047.32,
+        "merchant": "Local Supermarket",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-10T02:15:16.888955",
+        "transaction_id": "TXN-10140",
+        "amount": 2537.3,
+        "merchant": "Spotify",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-10T08:40:16.888955",
+        "transaction_id": "TXN-10082",
+        "amount": 76561.71,
+        "merchant": "Amazon",
+        "risk_level": "HIGH",
+        "action": "BLOCK"
+    },
+    {
+        "timestamp": "2026-08-10T11:11:16.888955",
+        "transaction_id": "TXN-10080",
+        "amount": 2508.97,
+        "merchant": "Steam",
+        "risk_level": "MEDIUM",
+        "action": "REVIEW"
+    },
+    {
+        "timestamp": "2026-08-10T11:28:16.888955",
+        "transaction_id": "TXN-10169",
+        "amount": 3002.26,
+        "merchant": "BestBuy",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-10T12:26:16.888955",
+        "transaction_id": "TXN-10155",
+        "amount": 10541.26,
+        "merchant": "BestBuy",
+        "risk_level": "MEDIUM",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-10T17:11:16.888955",
+        "transaction_id": "TXN-10188",
+        "amount": 12557.11,
+        "merchant": "PlayStation Network",
+        "risk_level": "MEDIUM",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-11T01:10:16.888955",
+        "transaction_id": "TXN-10035",
+        "amount": 614.9,
+        "merchant": "Steam",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-11T10:04:16.888955",
+        "transaction_id": "TXN-10040",
+        "amount": 124750.18,
+        "merchant": "Amazon",
+        "risk_level": "CRITICAL",
+        "action": "BLOCK"
+    },
+    {
+        "timestamp": "2026-08-11T14:04:16.888955",
+        "transaction_id": "TXN-10131",
+        "amount": 1052.65,
+        "merchant": "Apple Store",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-11T14:09:16.888955",
+        "transaction_id": "TXN-10096",
+        "amount": 2041.01,
+        "merchant": "PlayStation Network",
+        "risk_level": "MEDIUM",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-11T19:22:16.888955",
+        "transaction_id": "TXN-10036",
+        "amount": 2236.65,
+        "merchant": "BestBuy",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-11T22:32:16.888955",
+        "transaction_id": "TXN-10077",
+        "amount": 13958.29,
+        "merchant": "Steam",
+        "risk_level": "MEDIUM",
+        "action": "REVIEW"
+    },
+    {
+        "timestamp": "2026-08-12T02:51:16.888955",
+        "transaction_id": "TXN-10166",
+        "amount": 1892.87,
+        "merchant": "Spotify",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-12T05:08:16.888955",
+        "transaction_id": "TXN-10079",
+        "amount": 3091.39,
+        "merchant": "BestBuy",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-12T09:25:16.888955",
+        "transaction_id": "TXN-10016",
+        "amount": 137666.45,
+        "merchant": "Ola",
+        "risk_level": "CRITICAL",
+        "action": "BLOCK"
+    },
+    {
+        "timestamp": "2026-08-12T09:48:16.888955",
+        "transaction_id": "TXN-10007",
+        "amount": 6304.71,
+        "merchant": "Swiggy",
+        "risk_level": "MEDIUM",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-12T14:27:16.888955",
+        "transaction_id": "TXN-10066",
+        "amount": 12758.95,
+        "merchant": "Flipkart",
+        "risk_level": "MEDIUM",
+        "action": "REVIEW"
+    },
+    {
+        "timestamp": "2026-08-12T18:47:16.888955",
+        "transaction_id": "TXN-10092",
+        "amount": 2691.26,
+        "merchant": "Zomato",
+        "risk_level": "MEDIUM",
+        "action": "REVIEW"
+    },
+    {
+        "timestamp": "2026-08-12T20:08:16.888955",
+        "transaction_id": "TXN-10027",
+        "amount": 3714.45,
+        "merchant": "Ola",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-12T21:10:16.888955",
+        "transaction_id": "TXN-10178",
+        "amount": 3072.67,
+        "merchant": "BestBuy",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-13T04:01:16.888955",
+        "transaction_id": "TXN-10084",
+        "amount": 2946.98,
+        "merchant": "Swiggy",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-13T08:24:16.888955",
+        "transaction_id": "TXN-10138",
+        "amount": 60445.31,
+        "merchant": "Amazon",
+        "risk_level": "CRITICAL",
+        "action": "BLOCK"
+    },
+    {
+        "timestamp": "2026-08-13T15:07:16.888955",
+        "transaction_id": "TXN-10132",
+        "amount": 1001.61,
+        "merchant": "Steam",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-13T16:32:16.888955",
+        "transaction_id": "TXN-10091",
+        "amount": 2202.24,
+        "merchant": "Walmart",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-13T16:32:16.888955",
+        "transaction_id": "TXN-10185",
+        "amount": 82668.78,
+        "merchant": "Netflix",
+        "risk_level": "CRITICAL",
+        "action": "BLOCK"
+    },
+    {
+        "timestamp": "2026-08-14T05:54:16.888955",
+        "transaction_id": "TXN-10104",
+        "amount": 1549.13,
+        "merchant": "Walmart",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-14T12:17:16.888955",
+        "transaction_id": "TXN-10052",
+        "amount": 189.78,
+        "merchant": "Steam",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-14T22:16:16.888955",
+        "transaction_id": "TXN-10003",
+        "amount": 11879.97,
+        "merchant": "PlayStation Network",
+        "risk_level": "MEDIUM",
+        "action": "REVIEW"
+    },
+    {
+        "timestamp": "2026-08-15T02:44:16.888955",
+        "transaction_id": "TXN-10044",
+        "amount": 4773.6,
+        "merchant": "Steam",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-15T06:08:16.888955",
+        "transaction_id": "TXN-10006",
+        "amount": 3658.58,
+        "merchant": "Amazon",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-15T08:13:16.888955",
+        "transaction_id": "TXN-10172",
+        "amount": 12024.28,
+        "merchant": "Swiggy",
+        "risk_level": "MEDIUM",
+        "action": "REVIEW"
+    },
+    {
+        "timestamp": "2026-08-15T14:25:16.888955",
+        "transaction_id": "TXN-10012",
+        "amount": 1957.0,
+        "merchant": "Flipkart",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-15T16:00:16.888955",
+        "transaction_id": "TXN-10158",
+        "amount": 1743.96,
+        "merchant": "Uber",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-15T20:47:16.888955",
+        "transaction_id": "TXN-10059",
+        "amount": 3654.4,
+        "merchant": "PlayStation Network",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-16T01:26:16.888955",
+        "transaction_id": "TXN-10126",
+        "amount": 1211.31,
+        "merchant": "BestBuy",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-16T14:37:16.888955",
+        "transaction_id": "TXN-10148",
+        "amount": 4487.23,
+        "merchant": "Zomato",
+        "risk_level": "MEDIUM",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-16T18:43:16.888955",
+        "transaction_id": "TXN-10120",
+        "amount": 1897.84,
+        "merchant": "Walmart",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-17T00:00:16.888955",
+        "transaction_id": "TXN-10175",
+        "amount": 14565.67,
+        "merchant": "PlayStation Network",
+        "risk_level": "MEDIUM",
+        "action": "REVIEW"
+    },
+    {
+        "timestamp": "2026-08-17T09:19:16.888955",
+        "transaction_id": "TXN-10149",
+        "amount": 117187.86,
+        "merchant": "Uber",
+        "risk_level": "CRITICAL",
+        "action": "BLOCK"
+    },
+    {
+        "timestamp": "2026-08-17T17:30:16.888955",
+        "transaction_id": "TXN-10037",
+        "amount": 519.39,
+        "merchant": "Zomato",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-17T19:09:16.888955",
+        "transaction_id": "TXN-10018",
+        "amount": 1170.08,
+        "merchant": "PlayStation Network",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-17T23:09:16.888955",
+        "transaction_id": "TXN-10022",
+        "amount": 3693.54,
+        "merchant": "Netflix",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-17T23:09:16.888955",
+        "transaction_id": "TXN-10048",
+        "amount": 12133.6,
+        "merchant": "Spotify",
+        "risk_level": "MEDIUM",
+        "action": "REVIEW"
+    },
+    {
+        "timestamp": "2026-08-17T23:33:16.888955",
+        "transaction_id": "TXN-10005",
+        "amount": 1104.07,
+        "merchant": "Swiggy",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-18T00:44:16.888955",
+        "transaction_id": "TXN-10121",
+        "amount": 3448.5,
+        "merchant": "Steam",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-18T07:15:16.888955",
+        "transaction_id": "TXN-10072",
+        "amount": 323.7,
+        "merchant": "Zomato",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-18T13:52:16.888955",
+        "transaction_id": "TXN-10028",
+        "amount": 673.94,
+        "merchant": "Netflix",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-18T15:06:16.888955",
+        "transaction_id": "TXN-10067",
+        "amount": 4769.47,
+        "merchant": "Netflix",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-18T20:03:16.888955",
+        "transaction_id": "TXN-10060",
+        "amount": 13690.11,
+        "merchant": "PlayStation Network",
+        "risk_level": "MEDIUM",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-18T20:43:16.888955",
+        "transaction_id": "TXN-10115",
+        "amount": 4986.06,
+        "merchant": "Swiggy",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-18T22:27:16.888955",
+        "transaction_id": "TXN-10197",
+        "amount": 5781.51,
+        "merchant": "Swiggy",
+        "risk_level": "MEDIUM",
+        "action": "REVIEW"
+    },
+    {
+        "timestamp": "2026-08-19T02:57:16.888955",
+        "transaction_id": "TXN-10014",
+        "amount": 3794.55,
+        "merchant": "Uber",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-19T04:33:16.888955",
+        "transaction_id": "TXN-10198",
+        "amount": 1097.8,
+        "merchant": "BestBuy",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-19T05:20:16.888955",
+        "transaction_id": "TXN-10029",
+        "amount": 3931.59,
+        "merchant": "Netflix",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-19T07:22:16.888955",
+        "transaction_id": "TXN-10142",
+        "amount": 13093.77,
+        "merchant": "Uber",
+        "risk_level": "MEDIUM",
+        "action": "REVIEW"
+    },
+    {
+        "timestamp": "2026-08-19T10:49:16.888955",
+        "transaction_id": "TXN-10031",
+        "amount": 4939.66,
+        "merchant": "Steam",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-19T11:41:16.888955",
+        "transaction_id": "TXN-10108",
+        "amount": 86282.01,
+        "merchant": "Walmart",
+        "risk_level": "HIGH",
+        "action": "BLOCK"
+    },
+    {
+        "timestamp": "2026-08-19T14:05:16.888955",
+        "transaction_id": "TXN-10177",
+        "amount": 4960.38,
+        "merchant": "Walmart",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-20T00:16:16.888955",
+        "transaction_id": "TXN-10078",
+        "amount": 1874.52,
+        "merchant": "Netflix",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-20T01:10:16.888955",
+        "transaction_id": "TXN-10000",
+        "amount": 4976.13,
+        "merchant": "Flipkart",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-20T06:43:16.888955",
+        "transaction_id": "TXN-10081",
+        "amount": 312.66,
+        "merchant": "Amazon",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-20T07:39:16.888955",
+        "transaction_id": "TXN-10056",
+        "amount": 84868.83,
+        "merchant": "Spotify",
+        "risk_level": "HIGH",
+        "action": "BLOCK"
+    },
+    {
+        "timestamp": "2026-08-20T09:16:16.888955",
+        "transaction_id": "TXN-10161",
+        "amount": 1174.86,
+        "merchant": "Zomato",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-20T12:50:16.888955",
+        "transaction_id": "TXN-10135",
+        "amount": 4110.82,
+        "merchant": "Steam",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-20T13:03:16.888955",
+        "transaction_id": "TXN-10164",
+        "amount": 3463.52,
+        "merchant": "Netflix",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-20T17:03:16.888955",
+        "transaction_id": "TXN-10123",
+        "amount": 2360.09,
+        "merchant": "Flipkart",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-20T18:53:16.888955",
+        "transaction_id": "TXN-10186",
+        "amount": 137052.84,
+        "merchant": "Amazon",
+        "risk_level": "HIGH",
+        "action": "BLOCK"
+    },
+    {
+        "timestamp": "2026-08-20T20:11:16.888955",
+        "transaction_id": "TXN-10183",
+        "amount": 14260.45,
+        "merchant": "Spotify",
+        "risk_level": "MEDIUM",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-20T20:31:16.888955",
+        "transaction_id": "TXN-10051",
+        "amount": 350.6,
+        "merchant": "Ola",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-21T00:48:16.888955",
+        "transaction_id": "TXN-10173",
+        "amount": 13932.27,
+        "merchant": "Walmart",
+        "risk_level": "MEDIUM",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-21T04:28:16.888955",
+        "transaction_id": "TXN-10086",
+        "amount": 91558.9,
+        "merchant": "Uber",
+        "risk_level": "CRITICAL",
+        "action": "BLOCK"
+    },
+    {
+        "timestamp": "2026-08-21T10:43:16.888955",
+        "transaction_id": "TXN-10075",
+        "amount": 3523.22,
+        "merchant": "PlayStation Network",
+        "risk_level": "MEDIUM",
+        "action": "REVIEW"
+    },
+    {
+        "timestamp": "2026-08-21T12:03:16.888955",
+        "transaction_id": "TXN-10190",
+        "amount": 3244.44,
+        "merchant": "Zomato",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-21T18:22:16.888955",
+        "transaction_id": "TXN-10041",
+        "amount": 4947.5,
+        "merchant": "Swiggy",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-22T02:19:16.888955",
+        "transaction_id": "TXN-10174",
+        "amount": 14093.64,
+        "merchant": "PlayStation Network",
+        "risk_level": "MEDIUM",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-22T03:45:16.888955",
+        "transaction_id": "TXN-10030",
+        "amount": 912.66,
+        "merchant": "Apple Store",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-22T04:37:16.888955",
+        "transaction_id": "TXN-10101",
+        "amount": 2656.18,
+        "merchant": "Swiggy",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-22T12:09:16.888955",
+        "transaction_id": "TXN-10152",
+        "amount": 2988.62,
+        "merchant": "Steam",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-22T16:53:16.888955",
+        "transaction_id": "TXN-10071",
+        "amount": 3477.81,
+        "merchant": "PlayStation Network",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-22T17:33:16.888955",
+        "transaction_id": "TXN-10074",
+        "amount": 3113.37,
+        "merchant": "Local Supermarket",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-23T01:18:16.888955",
+        "transaction_id": "TXN-10099",
+        "amount": 2210.81,
+        "merchant": "Flipkart",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-23T02:35:16.888955",
+        "transaction_id": "TXN-10144",
+        "amount": 281.35,
+        "merchant": "Apple Store",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-23T03:28:16.888955",
+        "transaction_id": "TXN-10184",
+        "amount": 3186.31,
+        "merchant": "Uber",
+        "risk_level": "LOW",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-23T08:52:16.888955",
+        "transaction_id": "TXN-10179",
+        "amount": 135553.89,
+        "merchant": "Amazon",
+        "risk_level": "HIGH",
+        "action": "BLOCK"
+    },
+    {
+        "timestamp": "2026-08-23T12:27:16.888955",
+        "transaction_id": "TXN-10125",
+        "amount": 11798.28,
+        "merchant": "Walmart",
+        "risk_level": "MEDIUM",
+        "action": "ALLOW"
+    },
+    {
+        "timestamp": "2026-08-23T12:33:16.888955",
+        "transaction_id": "TXN-10129",
+        "amount": 6174.2,
+        "merchant": "Flipkart",
+        "risk_level": "MEDIUM",
+        "action": "ALLOW"
+    }
+]

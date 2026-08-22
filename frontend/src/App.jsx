@@ -4,6 +4,7 @@ import { InputForm } from './components/InputForm';
 import { GeoRadar } from './components/GeoRadar';
 import { RiskResultCard } from './components/RiskResultCard';
 import { ApiConfigModal } from './components/ApiConfigModal';
+import { Dashboard } from './components/Dashboard';
 import { DEFAULT_INPUTS, evaluateFraudRisk } from './services/fraudEngine';
 import { analyzeTransactionApi, getStoredApiConfig, setStoredApiConfig } from './services/api';
 import { ShieldCheck, Info } from 'lucide-react';
@@ -18,8 +19,12 @@ export function App() {
   const [apiConfig, setApiConfig] = useState(getStoredApiConfig());
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
 
+  // Navigation
+  const [currentView, setCurrentView] = useState('main');
+
   // Toast Notification banner
   const [toastMessage, setToastMessage] = useState(null);
+  const [bankNotification, setBankNotification] = useState(null);
 
   // (Removed on-mount useEffect so it starts completely empty)
 
@@ -60,6 +65,35 @@ export function App() {
       }
 
       setResults(response.data);
+
+      const hasHighRisk = response.data.some(res => res && (res.riskStatus === 'HIGH' || res.riskStatus === 'CRITICAL'));
+      if (hasHighRisk) {
+        setBankNotification("AUTO BANK NOTIFICATION SENT: High risk activity detected. Transaction stopped and bank informed.");
+        setTimeout(() => setBankNotification(null), 8000);
+      }
+
+      // Save to local storage history
+      try {
+        const storedHistory = localStorage.getItem('ns_transaction_history');
+        const historyArray = storedHistory ? JSON.parse(storedHistory) : [];
+        
+        response.data.forEach(res => {
+          if (!res) return;
+          historyArray.unshift({
+            timestamp: new Date().toISOString(),
+            transaction_id: res.transactionId,
+            amount: res.amount ? res.amount.replace('₹', '').replace(/,/g, '') : 0,
+            merchant: res.merchant,
+            risk_level: res.riskStatus,
+            action: res.action
+          });
+        });
+        
+        localStorage.setItem('ns_transaction_history', JSON.stringify(historyArray));
+      } catch (e) {
+        console.error("Failed to save history", e);
+      }
+
     } catch (err) {
       showToast(`Error analyzing transaction: ${err.message}`);
     } finally {
@@ -98,15 +132,48 @@ export function App() {
         </div>
       )}
 
+      {/* Auto Bank Notification Popup */}
+      {bankNotification && (
+        <div style={{
+          position: 'fixed',
+          top: '20px',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          background: 'rgba(255, 0, 85, 0.95)',
+          border: '2px solid var(--cyber-magenta)',
+          boxShadow: '0 0 30px rgba(255, 0, 85, 0.6)',
+          padding: '1rem 2rem',
+          borderRadius: '4px',
+          zIndex: 10002,
+          display: 'flex',
+          alignItems: 'center',
+          gap: '1rem',
+          fontFamily: 'var(--font-code)',
+          fontWeight: 'bold',
+          color: '#fff',
+          animation: 'cyberGlowPulse 1s infinite'
+        }}>
+          <ShieldCheck size={24} color="#fff" />
+          <span>{bankNotification}</span>
+        </div>
+      )}
+
       {/* Top Cyber HUD Header */}
       <Header
         onOpenSettings={() => setIsSettingsOpen(true)}
         scanlinesEnabled={scanlinesEnabled}
         onToggleScanlines={() => setScanlinesEnabled(!scanlinesEnabled)}
         isLiveBackend={apiConfig.isLiveBackend}
+        currentView={currentView}
+        setCurrentView={setCurrentView}
       />
 
-      {/* Main Grid Content */}
+      {/* Main Content */}
+      {currentView === 'dashboard' ? (
+        <main>
+          <Dashboard />
+        </main>
+      ) : (
       <main style={{ display: 'grid', gridTemplateColumns: 'minmax(320px, 1.3fr) minmax(320px, 1fr)', gap: '1.5rem', alignItems: 'start' }}>
         
         {/* Left Column: 15 Core Input Form Ingestion */}
@@ -149,6 +216,7 @@ export function App() {
         </div>
 
       </main>
+      )}
 
       <ApiConfigModal
         isOpen={isSettingsOpen}

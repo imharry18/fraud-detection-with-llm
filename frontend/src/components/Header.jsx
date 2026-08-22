@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { ShieldAlert, Cpu, Wifi, Settings, Eye, EyeOff } from 'lucide-react';
+import { ShieldAlert, Cpu, Wifi, Settings, Eye, EyeOff, LayoutDashboard, Shield } from 'lucide-react';
 
-export const Header = ({ onOpenSettings, scanlinesEnabled, onToggleScanlines, isLiveBackend }) => {
+export const Header = ({ onOpenSettings, scanlinesEnabled, onToggleScanlines, isLiveBackend, currentView, setCurrentView }) => {
   const [time, setTime] = useState('');
 
   useEffect(() => {
@@ -86,6 +86,16 @@ export const Header = ({ onOpenSettings, scanlinesEnabled, onToggleScanlines, is
             <Wifi size={13} />
             <span>{isLiveBackend ? 'LIVE API CONNECTED' : 'SIMULATION MODE'}</span>
           </div>
+
+          {/* Navigation Toggle */}
+          <button 
+            onClick={() => setCurrentView(currentView === 'main' ? 'dashboard' : 'main')} 
+            className="cyber-button preset"
+            style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', borderColor: currentView === 'dashboard' ? 'var(--cyber-cyan)' : '' }}
+          >
+            {currentView === 'main' ? <LayoutDashboard size={14} /> : <Shield size={14} />}
+            <span>{currentView === 'main' ? 'DASHBOARD' : 'SCANNER'}</span>
+          </button>
 
           {/* Scanline FX Toggle */}
           <button 
