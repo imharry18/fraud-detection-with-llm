@@ -21,10 +21,7 @@ export function App() {
   // Toast Notification banner
   const [toastMessage, setToastMessage] = useState(null);
 
-  useEffect(() => {
-    const initialResult = evaluateFraudRisk(DEFAULT_INPUTS);
-    setResults([initialResult]);
-  }, []);
+  // (Removed on-mount useEffect so it starts completely empty)
 
   const showToast = (msg) => {
     setToastMessage(msg);
@@ -44,6 +41,8 @@ export function App() {
 
   const handleSubmitRiskAnalysis = async (customPayload = null, isJsonMode = false) => {
     setIsAnalyzing(true);
+    // Optional: Clear previous results when starting a new scan
+    setResults([]); 
 
     try {
       const payloadToAnalyze = isJsonMode ? customPayload : inputs;
@@ -134,13 +133,17 @@ export function App() {
 
           {/* Cyber Terminal Ticket Output */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxHeight: '800px', overflowY: 'auto' }}>
-            {results.map((res, idx) => (
-              <RiskResultCard
-                key={res?.transactionId || idx}
-                result={res}
-                isAnalyzing={isAnalyzing}
-              />
-            ))}
+            {results.length === 0 ? (
+              <RiskResultCard result={null} isAnalyzing={isAnalyzing} />
+            ) : (
+              results.map((res, idx) => (
+                <RiskResultCard
+                  key={res?.transactionId || idx}
+                  result={res}
+                  isAnalyzing={isAnalyzing}
+                />
+              ))
+            )}
           </div>
 
         </div>
