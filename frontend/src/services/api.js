@@ -1,6 +1,6 @@
 import { evaluateFraudRisk } from './fraudEngine';
 
-const DEFAULT_API_URL = 'http://127.0.0.1:8000/predict';
+const DEFAULT_API_URL = 'https://fraudguard-backend-6sx1.onrender.com/predict';
 
 export const getStoredApiConfig = () => {
   const storedLive = localStorage.getItem('ns_live_backend');
@@ -62,7 +62,7 @@ const mapResponseToCard = (data) => {
 };
 
 export const analyzeTransactionApi = async (inputData, isLiveBackend = false, apiUrl = DEFAULT_API_URL, isJsonMode = false) => {
-  
+
   // Convert input to an array of payloads
   let payloads = [];
   if (isJsonMode) {
@@ -102,7 +102,7 @@ export const analyzeTransactionApi = async (inputData, isLiveBackend = false, ap
       const data = await response.json();
       results.push(mapResponseToCard(data));
     }
-    
+
     return {
       success: true,
       source: 'LIVE_BACKEND_API',
