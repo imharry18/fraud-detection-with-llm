@@ -12,7 +12,7 @@ export function App() {
   const [inputs, setInputs] = useState(DEFAULT_INPUTS);
   const [scanlinesEnabled, setScanlinesEnabled] = useState(true);
   const [isAnalyzing, setIsAnalyzing] = useState(false);
-  const [result, setResult] = useState(null);
+  const [results, setResults] = useState([]);
   
   // API Configuration state
   const [apiConfig, setApiConfig] = useState(getStoredApiConfig());
@@ -21,10 +21,9 @@ export function App() {
   // Toast Notification banner
   const [toastMessage, setToastMessage] = useState(null);
 
-  // Evaluate default initial case on mount (Pre-click prompt default result ready!)
   useEffect(() => {
     const initialResult = evaluateFraudRisk(DEFAULT_INPUTS);
-    setResult(initialResult);
+    setResults([initialResult]);
   }, []);
 
   const showToast = (msg) => {
@@ -43,14 +42,16 @@ export function App() {
     showToast(isLive ? `Live Backend Activated: ${url}` : 'Switched to Simulation Engine');
   };
 
-  const handleSubmitRiskAnalysis = async () => {
+  const handleSubmitRiskAnalysis = async (customPayload = null, isJsonMode = false) => {
     setIsAnalyzing(true);
 
     try {
+      const payloadToAnalyze = isJsonMode ? customPayload : inputs;
       const response = await analyzeTransactionApi(
-        inputs,
+        payloadToAnalyze,
         apiConfig.isLiveBackend,
-        apiConfig.apiUrl
+        apiConfig.apiUrl,
+        isJsonMode
       );
 
       if (response.warning) {
@@ -59,7 +60,7 @@ export function App() {
         showToast(`Analysis Completed via ${response.source}`);
       }
 
-      setResult(response.data);
+      setResults(response.data);
     } catch (err) {
       showToast(`Error analyzing transaction: ${err.message}`);
     } finally {
@@ -132,16 +133,20 @@ export function App() {
           />
 
           {/* Cyber Terminal Ticket Output */}
-          <RiskResultCard
-            result={result}
-            isAnalyzing={isAnalyzing}
-          />
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxHeight: '800px', overflowY: 'auto' }}>
+            {results.map((res, idx) => (
+              <RiskResultCard
+                key={res?.transactionId || idx}
+                result={res}
+                isAnalyzing={isAnalyzing}
+              />
+            ))}
+          </div>
 
         </div>
 
       </main>
 
-      {/* Backend API Config Modal */}
       <ApiConfigModal
         isOpen={isSettingsOpen}
         onClose={() => setIsSettingsOpen(false)}
@@ -149,7 +154,7 @@ export function App() {
         apiUrl={apiConfig.apiUrl}
         onSaveConfig={handleSaveApiConfig}
         currentInputs={inputs}
-        currentResult={result}
+        currentResult={results[0]}
       />
 
       {/* Cyber Footer */}

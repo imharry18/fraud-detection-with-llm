@@ -1,11 +1,29 @@
-import React from 'react';
-import { CreditCard, MapPin, Smartphone, Activity, Zap, RefreshCw, Layers } from 'lucide-react';
+import React, { useState } from 'react';
+import { CreditCard, MapPin, Smartphone, Activity, Zap, RefreshCw, Layers, FileJson, Edit3 } from 'lucide-react';
 import { PRESETS } from '../services/fraudEngine';
 
 export const InputForm = ({ inputs, onChange, onPresetSelect, onSubmit, isAnalyzing }) => {
+  const [inputMode, setInputMode] = useState('manual');
+  const [jsonText, setJsonText] = useState('[\n  {\n    "transaction_amount": 125000.0,\n    "transaction_time": "2026-08-22 23:47:00",\n    "card_id": "CARD_DEMO_001",\n    "merchant_id": "MERCHANT_ELECTRONICS_001",\n    "merchant_category": "Electronics",\n    "payment_type": "Credit Card",\n    "latitude": 18.5204,\n    "longitude": 73.8567,\n    "billing_latitude": 32.7266,\n    "billing_longitude": 74.8570,\n    "device_id": "NEW_DEVICE_9281",\n    "email_domain": "gmail.com",\n    "billing_address": "Jammu",\n    "history": []\n  }\n]');
+  const [jsonError, setJsonError] = useState('');
   
   const handleInputChange = (field, value) => {
     onChange({ ...inputs, [field]: value });
+  };
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    if (inputMode === 'json') {
+      try {
+        const parsed = JSON.parse(jsonText);
+        setJsonError('');
+        onSubmit(parsed, true);
+      } catch (err) {
+        setJsonError('Invalid JSON format: ' + err.message);
+      }
+    } else {
+      onSubmit(null, false);
+    }
   };
 
   return (
@@ -32,27 +50,48 @@ export const InputForm = ({ inputs, onChange, onPresetSelect, onSubmit, isAnalyz
           </span>
         </div>
 
-        {/* Quick Demo Presets */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', flexWrap: 'wrap' }}>
-          <span style={{ fontSize: '0.72rem', color: 'var(--text-muted)', fontFamily: 'var(--font-display)' }}>
-            LOAD PRESET:
-          </span>
-          {Object.keys(PRESETS).map((key) => (
-            <button
-              key={key}
-              type="button"
-              className="cyber-button preset"
-              onClick={() => onPresetSelect(PRESETS[key])}
-            >
-              {PRESETS[key].name}
-            </button>
-          ))}
+        {/* Mode Toggles & Presets */}
+        <div style={{ display: 'flex', gap: '0.5rem' }}>
+          <button
+            type="button"
+            className={`cyber-button ${inputMode === 'manual' ? '' : 'preset'}`}
+            onClick={() => setInputMode('manual')}
+            style={{ padding: '0.4rem 0.8rem', display: 'flex', alignItems: 'center', gap: '0.4rem', backgroundColor: inputMode === 'manual' ? 'var(--cyber-cyan)' : 'transparent', color: inputMode === 'manual' ? '#000' : 'var(--cyber-cyan)' }}
+          >
+            <Edit3 size={14} /> MANUAL
+          </button>
+          <button
+            type="button"
+            className={`cyber-button ${inputMode === 'json' ? '' : 'preset'}`}
+            onClick={() => setInputMode('json')}
+            style={{ padding: '0.4rem 0.8rem', display: 'flex', alignItems: 'center', gap: '0.4rem', backgroundColor: inputMode === 'json' ? 'var(--cyber-cyan)' : 'transparent', color: inputMode === 'json' ? '#000' : 'var(--cyber-cyan)' }}
+          >
+            <FileJson size={14} /> JSON
+          </button>
         </div>
+
+        {inputMode === 'manual' && (
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', flexWrap: 'wrap', width: '100%', marginTop: '0.5rem' }}>
+            <span style={{ fontSize: '0.72rem', color: 'var(--text-muted)', fontFamily: 'var(--font-display)' }}>
+              LOAD PRESET:
+            </span>
+            {Object.keys(PRESETS).map((key) => (
+              <button
+                key={key}
+                type="button"
+                className="cyber-button preset"
+                onClick={() => onPresetSelect(PRESETS[key])}
+              >
+                {PRESETS[key].name}
+              </button>
+            ))}
+          </div>
+        )}
       </div>
 
-      <form onSubmit={(e) => { e.preventDefault(); onSubmit(); }}>
+      <form onSubmit={handleFormSubmit}>
         
-        {/* Module Grid */}
+        {inputMode === 'manual' ? (
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.2rem' }}>
           
           {/* Module 1: Transaction Core */}
@@ -345,6 +384,29 @@ export const InputForm = ({ inputs, onChange, onPresetSelect, onSubmit, isAnalyz
           </div>
 
         </div>
+        ) : (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', color: 'var(--cyber-cyan)' }}>
+              <FileJson size={16} />
+              <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '0.82rem', letterSpacing: '1px' }}>
+                RAW JSON PAYLOAD (SINGLE OR ARRAY)
+              </h3>
+            </div>
+            <textarea
+              className="cyber-input"
+              style={{ minHeight: '400px', fontFamily: 'var(--font-code)', fontSize: '0.85rem', lineHeight: '1.5', padding: '1rem', whiteSpace: 'pre', color: 'var(--cyber-cyan)', backgroundColor: 'rgba(5, 12, 24, 0.8)' }}
+              value={jsonText}
+              onChange={(e) => setJsonText(e.target.value)}
+              placeholder="Paste JSON transaction data here..."
+              required
+            />
+            {jsonError && (
+              <div style={{ color: 'var(--cyber-magenta)', fontSize: '0.85rem', fontFamily: 'var(--font-code)', padding: '0.5rem', background: 'rgba(255,0,85,0.1)', border: '1px solid var(--cyber-magenta)', borderRadius: '4px' }}>
+                {jsonError}
+              </div>
+            )}
+          </div>
+        )}
 
         {/* Action Button & Cyber Submit */}
         <div style={{ marginTop: '1.5rem', display: 'flex', justifyContent: 'flex-end', gap: '1rem', alignItems: 'center' }}>
