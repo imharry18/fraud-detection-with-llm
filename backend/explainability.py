@@ -4,6 +4,41 @@
 # ============================================================
 # EXPLAINABILITY ENGINE
 # ============================================================
+import os
+import json
+from google import genai
+
+def call_gemini_explanation(transaction, risk_score, risk_level, rule_reasons):
+    api_key = os.getenv("GEMINI_API_KEY")
+    if not api_key:
+        return None
+        
+    try:
+        client = genai.Client(api_key=api_key)
+        
+        prompt = f"""
+        Act as a 100% confident fraud detection expert. Review this transaction and risk result, and provide a short JSON response.
+        
+        Transaction Amount: {transaction.get('transaction_amount')}
+        Risk Score: {risk_score}/100 ({risk_level})
+        Anomalies Found: {', '.join([r['title'] for r in rule_reasons]) if rule_reasons else 'None'}
+        
+        Output a valid JSON object with EXACTLY these two keys:
+        - "summary": A short, highly confident 1-2 sentence explanation of the final decision.
+        - "reasons": An array of objects, each with a "title", "description" (short), and "severity" ("HIGH", "MEDIUM", or "LOW").
+
+        JSON format only.
+        """
+        
+        response = client.models.generate_content(
+            model='gemini-2.5-flash',
+            contents=prompt,
+            config={'response_mime_type': 'application/json'}
+        )
+        return json.loads(response.text)
+    except Exception as e:
+        print("Gemini API Error:", e)
+        return None
 
 
 def generate_explanation(
@@ -306,6 +341,14 @@ def generate_explanation(
             "No significant transaction anomalies "
             "were detected."
         )
+
+    # --- GEMINI INTEGRATION ---
+    gemini_output = call_gemini_explanation(transaction, risk_score, risk_level, reasons)
+    if gemini_output:
+        summary = gemini_output.get("summary", summary)
+        gemini_reasons = gemini_output.get("reasons", [])
+        if gemini_reasons and isinstance(gemini_reasons, list):
+            reasons = gemini_reasons
 
 
     return {

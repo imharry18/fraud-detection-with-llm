@@ -7,3 +7,5 @@ lightgbm
 joblib
 pydantic
 python-multipart
+google-generativeai
+python-dotenv

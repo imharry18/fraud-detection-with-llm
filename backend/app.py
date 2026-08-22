@@ -5,6 +5,9 @@
 # REAL-TIME FRAUD DETECTION API
 # ============================================================
 
+from dotenv import load_dotenv
+load_dotenv()
+
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
 from typing import Optional, List, Dict, Any
