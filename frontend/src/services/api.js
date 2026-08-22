@@ -15,22 +15,34 @@ export const setStoredApiConfig = (isLive, url) => {
   if (url) localStorage.setItem('ns_api_url', url);
 };
 
-const mapManualToPayload = (inputs) => ({
-  transaction_amount: parseFloat(inputs.amount),
-  transaction_time: `${inputs.date} ${inputs.time}:00`,
-  card_id: inputs.cardId,
-  merchant_id: inputs.merchantId,
-  merchant_category: inputs.merchantCategory,
-  payment_type: inputs.paymentType,
-  latitude: parseFloat(inputs.currentLat),
-  longitude: parseFloat(inputs.currentLong),
-  billing_latitude: parseFloat(inputs.billingLat),
-  billing_longitude: parseFloat(inputs.billingLong),
-  device_id: inputs.deviceId,
-  email_domain: inputs.emailDomain,
-  billing_address: "Unknown",
-  history: []
-});
+const mapManualToPayload = (inputs) => {
+  const count = parseInt(inputs.prevTxnCount, 10) || 0;
+  const avgAmt = parseFloat(inputs.prevAvgAmount) || 0;
+  // Construct a dummy history array so the backend can compute the historical average
+  const history = Array.from({ length: Math.min(count, 5) }).map(() => ({
+    amount: avgAmt,
+    merchant: "VARIOUS_MERCHANTS",
+    category: "General",
+    time: "2026-08-01 12:00:00"
+  }));
+
+  return {
+    transaction_amount: parseFloat(inputs.amount),
+    transaction_time: `${inputs.date} ${inputs.time}:00`,
+    card_id: inputs.cardId,
+    merchant_id: inputs.merchantId,
+    merchant_category: inputs.merchantCategory,
+    payment_type: inputs.paymentType,
+    latitude: parseFloat(inputs.currentLat),
+    longitude: parseFloat(inputs.currentLong),
+    billing_latitude: parseFloat(inputs.billingLat),
+    billing_longitude: parseFloat(inputs.billingLong),
+    device_id: inputs.deviceId,
+    email_domain: inputs.emailDomain,
+    billing_address: "Unknown",
+    history: history
+  };
+};
 
 const mapResponseToCard = (data) => {
   if (!data || !data.success) return null;

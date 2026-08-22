@@ -74,6 +74,9 @@ def calculate_risk_score(
 
     Rules:
         30%
+        
+    Note: If rules catch a definitive anomaly (high rule score),
+    it overrides the base weighting to ensure the risk is flagged.
     """
 
     ml_score = normalize_ml_score(
@@ -95,11 +98,15 @@ def calculate_risk_score(
         )
     )
 
-    final_score = (
+    base_score = (
         ml_score * ML_WEIGHT
         +
         rule_score * RULE_WEIGHT
     )
+    
+    # If rules are heavily triggered, guarantee a high score
+    # This ensures "High Risk" presets hit the >80 threshold
+    final_score = max(base_score, rule_score * 0.9)
 
     return round(
         max(

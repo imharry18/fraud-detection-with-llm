@@ -26,7 +26,9 @@ from fraud_rules import (
 )
 
 from risk_engine import (
-    calculate_risk
+    calculate_risk,
+    get_risk_level,
+    get_recommended_action
 )
 
 from explainability import (
@@ -228,6 +230,25 @@ def predict(
                 risk_result
             )
         )
+
+        # ====================================================
+        # STEP 5.5 — LLM SCORE OVERRIDE
+        # ====================================================
+
+        adjusted_score = explanation.get("adjusted_score")
+        if adjusted_score is not None:
+            # Overwrite the risk score
+            risk_result["risk_score"] = float(adjusted_score)
+            
+            # Recalculate level and action
+            risk_result["risk_level"] = get_risk_level(risk_result["risk_score"])
+            
+            rules_triggered = rule_result.get("rules_triggered", 0)
+            new_action = get_recommended_action(risk_result["risk_score"], rules_triggered)
+            
+            risk_result["action"] = new_action["action"]
+            risk_result["action_code"] = new_action["code"]
+            risk_result["action_description"] = new_action["description"]
 
         # ====================================================
         # FINAL RESPONSE

@@ -19,12 +19,15 @@ def call_gemini_explanation(transaction, risk_score, risk_level, rule_reasons):
         prompt = f"""
         Act as a 100% confident fraud detection expert. Review this transaction and risk result, and provide a short JSON response.
         
-        Transaction Amount: {transaction.get('transaction_amount')}
-        Risk Score: {risk_score}/100 ({risk_level})
-        Anomalies Found: {', '.join([r['title'] for r in rule_reasons]) if rule_reasons else 'None'}
+        Today's Transaction Amount: {transaction.get('transaction_amount')}
+        System Risk Score: {risk_score}/100 ({risk_level})
+        Anomalies Found (including historical average comparisons): {', '.join([r.get('description', r.get('title', '')) for r in rule_reasons]) if rule_reasons else 'None'}
         
-        Output a valid JSON object with EXACTLY these two keys:
-        - "summary": A short, highly confident 1-2 sentence explanation of the final decision.
+        You have the authority to alter the system's mathematically calculated risk score based on your expert context of the transaction.
+        
+        Output a valid JSON object with EXACTLY these three keys:
+        - "adjusted_score": An integer from 0-100 representing your final expert risk score. You can keep it similar to the System Risk Score or completely change it if you strongly disagree.
+        - "summary": A short, highly confident 1-2 sentence explanation of the final decision. Explicitly mention how today's transaction amount compares to their historical average if that data is present in the anomalies.
         - "reasons": An array of objects, each with a "title", "description" (short), and "severity" ("HIGH", "MEDIUM", or "LOW").
 
         JSON format only.
